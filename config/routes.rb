@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "restaurants", to: "restaurants#index", as: :restaurants
+  get "restaurants/new", to: "restaurants#new", as: :new_task
 end
