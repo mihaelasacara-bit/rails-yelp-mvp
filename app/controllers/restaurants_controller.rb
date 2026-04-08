@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_action :set_restaurant, only: %i[show]
   def index
     @restaurants = Restaurant.all
   end
@@ -16,9 +17,16 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def restaurant_params
     params.expect(restaurant: [ :name, :category, :address ])
+  end
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:id])
   end
 end
