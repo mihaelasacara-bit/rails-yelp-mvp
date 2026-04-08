@@ -8,3 +8,7 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+ul {
+  list-style-type: none;
+  padding-left: 0px !important;
+}

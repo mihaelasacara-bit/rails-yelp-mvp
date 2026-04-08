@@ -4,4 +4,11 @@
 <div class="ms-3">
   <p> Cuisine: <%= @restaurant.category.capitalize %></p>
   <p> Address: <%= @restaurant.address %></p>
+  <h2>Reviews</h2>
+  <div>
+    <ul>
+      <% @restaurant.reviews.each do |review| %>
+        <li><%= "⭐️" * review.rating %><br><%= review.content %></li>
+      <% end %>
+    </ul>
 </div>
