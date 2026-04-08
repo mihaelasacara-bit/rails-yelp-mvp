@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "restaurants", to: "restaurants#index", as: :restaurants
   get "restaurants/new", to: "restaurants#new", as: :new_task
+  post "restaurants", to: "restaurants#create", as: :create_restaurant
 end
