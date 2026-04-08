@@ -1,10 +1,11 @@
-<div class="m-3">
+<div class="m-3 title-w-button">
   <h1>All restaurants</h1>
+  <button class="btn btn-primary"><%= link_to "Add a restaurant", new_restaurant_path %></button>
 </div>
-<div>
+<div class="ms-3">
   <ul>
     <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant %></li>
+    <li>📍 <%= link_to restaurant.name, restaurant %></li>
     <% end %>
   </ul>
 </div>

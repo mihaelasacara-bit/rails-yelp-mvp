@@ -12,3 +12,14 @@ ul {
   list-style-type: none;
   padding-left: 0px !important;
 }
+
+.title-w-button {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}

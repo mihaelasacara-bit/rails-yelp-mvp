@@ -11,13 +11,14 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to "/restaurants", notice: "Restaurant was created."
+      redirect_to @restaurant, notice: "Restaurant was created."
     else
       render :new, status: :unprocessable_content
     end
   end
 
   def show
+    @review = Review.new
   end
 
   private

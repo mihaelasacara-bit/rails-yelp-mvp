@@ -4,11 +4,22 @@
 <div class="ms-3">
   <p> Cuisine: <%= @restaurant.category.capitalize %></p>
   <p> Address: <%= @restaurant.address %></p>
-  <h2>Reviews</h2>
+  <p><%= link_to "⬅ Back to restaurants list", restaurants_path %></p>
   <div>
-    <ul>
-      <% @restaurant.reviews.each do |review| %>
-        <li><%= "⭐️" * review.rating %><br><%= review.content %></li>
-      <% end %>
-    </ul>
+    <div class="title-w-button">
+      <h2>Reviews</h2>
+    </div>
+    <div>
+      <ul>
+        <% @restaurant.reviews.each do |review| %>
+          <li><%= "⭐️" * review.rating %><br><%= review.content %></li><br>
+        <% end %>
+      </ul>
+    </div>
+    <div class="m-3">
+      <h3>Add a new review for <%= @restaurant.name %></h1>
+    </div>
+    <div class="p-3">
+      <%= render "review_form", review: @review %>
+    </div>
 </div>
